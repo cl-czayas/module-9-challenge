@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === "GNU AGPLv3") {
+    if (license === "GNU AGPLv3") {
     return "![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)";
 } else if (license === "GNU GPLv3") {
     return "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
@@ -16,7 +16,7 @@ function renderLicenseBadge(license) {
 } else if (license === "MPL 2.0") {
     return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)";
 } else {
-  return ""
+    return ""
 }
 }
 
@@ -38,7 +38,7 @@ function renderLicenseLink(license) {
 } else if (license === "MPL 2.0") {
     return "https://opensource.org/licenses/MPL-2.0)";
 } else {
-  return ""
+    return ""
 }
 }
 
@@ -48,25 +48,38 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-  # ${data.title}
-  ## Description
-  ${data.description}
-  ## Table of Contents 
+    return `# ${data.title}
+
+## Description
+${data.description}
+
+## Table of Contents 
   * [Installation](#-Installation)
   * [Usage](#-Usage)
   * [License](#-Installation)
+  * [Contributing](#-Contributing)
+  * [Testing](#-Testing)
   * [Contact Info](#-Contact-Information)
-  ## Installation
-  ${data.installation}
-  ## Usage
-  ${data.usage}
-  ## License 
-  ${data.license}
-  ## Contact Information 
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## License 
+${data.license}
+
+## Contributing
+${data.contribution}
+
+## Testing
+${data.tests}
+
+## Contact Information 
   * GitHub Username: ${data.userName}
   * Contact Email: ${data.userEmail}
-  `;
-  }
+`;
+}
 
 module.exports = generateMarkdown;
