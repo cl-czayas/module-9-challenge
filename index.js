@@ -2,6 +2,7 @@
 const fs = require("fs")
 const inquirer = require("inquirer")
 const generateMarkdown = require("./utils/generateMarkdown")
+const renderLicenseBadge = require("./utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
 const questions = [   
@@ -77,6 +78,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((data) => {
         console.log(JSON.stringify(data, null, " "));
+        data.renderLicenseBadge = renderLicenseBadge(data.license);
         writeToFile("./generated/README.md", data);
     })
 }
