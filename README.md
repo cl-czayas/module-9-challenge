@@ -14,7 +14,8 @@ After accessing the application, users answer questions about their project. Onc
 
 ## Screenshot
 
-![alt text](./screenshot/Screen.png)
+![App Screenshot](./screenshot/Screen1.png)
+![Generated README Screenshot](./screenshot/Screen2.png)
 
 ## Credits
 

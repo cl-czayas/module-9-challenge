@@ -78,8 +78,7 @@ ${data.tests}
 
 ## Contact Information 
   * GitHub Username: ${data.userName}
-  * Contact Email: ${data.userEmail}
-`;
+  * Contact Email: ${data.userEmail}`;
 }
 
 module.exports = generateMarkdown;
